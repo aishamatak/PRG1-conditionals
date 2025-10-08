@@ -181,6 +181,26 @@ if day == "Saturday" or day == "Sunday":
 else: 
     base_cost = base_cost
 
+# Rates for different reigons 
+location = input("enter continent")
+if location == "Asia":
+    base_cost = base_cost * 5
+elif location == "Oceania":
+    base_cost = base_cost * 9 
+elif location == "Africa":
+    base_cost = base_cost * 3 
+elif location == "Europe":
+    base_cost = base_cost
+elif location == "North America":
+    base_cost = base_cost * 10
+elif location == "South America":
+    base_cost = base_cost * 8
+elif location == "Antartica":
+    base_cost = base_cost * 12
+else: 
+    print("Enter a continent") 
+
+# Adding a discount for bulk items 
 
 
 # ==============================================================================
