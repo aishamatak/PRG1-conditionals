@@ -4,6 +4,22 @@ def check_temperature(temp):
         return "It's warm today!"
     else:
         return "It's cool today!"
+      
+# Add more temperature categories (freezing, hot, very hot)
+def check_temperature(temp):
+    if temp >= 45:
+       return "very hot"
+    elif temp >= 35:
+        return "Hot"
+    elif temp >= 25:
+        return "Warm"
+    elif temp >= 15:
+        return "Cool"
+    elif temp >= 5:
+        return "Cold"
+    else:
+        return "Freezing"
+    
 
 
 def grade_assignment(score):
@@ -16,6 +32,18 @@ def grade_assignment(score):
     else:
         return "Please try again"
 
+# A+ grade for scores ≥ 97
+def grade_assignment(score): 
+    if score >= 97:
+        return print("A+ - Excellent Work!")
+    elif score >= 85:
+        return print("A - Great Work!")
+    elif score >= 75:
+        return print("B - Good Work!")
+    elif score >= 65:
+        return print ("C - Good try!")
+    else: 
+        return print("F") 
 
 def check_even_odd(number):
     if number % 2 == 0:
@@ -39,6 +67,20 @@ def handle_http_status(status_code):
             return "Internal Server Error"
         case _:
             return f"Unknown status code: {status_code}"
+
+
+# match/case into if/else
+
+def handle_http_status(status_code):
+    if status_code == 200:
+        return print("ok - request successful")
+    elif status_code == 404:
+        return print("not found")
+    elif status_code == 500:
+        return print("internal server error")
+    else:
+        return print (f"unknown status code: {status_code}")
+    
 
 
 
