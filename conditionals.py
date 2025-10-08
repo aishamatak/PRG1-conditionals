@@ -8,7 +8,7 @@ def check_temperature(temp):
 # Add more temperature categories (freezing, hot, very hot)
 def check_temperature(temp):
     if temp >= 45:
-       return "very hot"
+       return "Very hot"
     elif temp >= 35:
         return "Hot"
     elif temp >= 25:
@@ -27,7 +27,6 @@ if user_input.isdidgit():
     print("valid")
 else:
     print("not valid")
-
 
 while True:
     try:
@@ -152,6 +151,8 @@ def categorise_age(age):
         return "Adult"
     else:
         return "Senior"
+    
+
 
 
 def calculate_shipping(weight, distance, is_express=False):
@@ -170,7 +171,16 @@ def calculate_shipping(weight, distance, is_express=False):
     if is_express:
         base_cost *= 2
     
-    return round(base_cost, 2)
+    return round(base_cost, 2) 
+
+# Adding a weekend surplus charge 
+day = input("enter delivery day")
+
+if day == "Saturday" or day == "Sunday":
+    base_cost *= 4 
+else: 
+    base_cost = base_cost
+
 
 
 # ==============================================================================
