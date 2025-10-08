@@ -20,6 +20,22 @@ def check_temperature(temp):
     else:
         return "Freezing"
     
+# integer error handling 
+user_input = int(input("enter number"))
+
+if user_input.isdidgit():
+    print("valid")
+else:
+    print("not valid")
+
+
+while True:
+    try:
+        user_input = int(input("enter number"))
+        print("this is valid")
+        break
+    except ValueError:
+        print("not a valid integer")
 
 
 def grade_assignment(score):
